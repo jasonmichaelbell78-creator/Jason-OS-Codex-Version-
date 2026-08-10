@@ -1,0 +1,4 @@
+interface:
+  display_name: "Verify Convergence"
+  short_description: "Verify claims through multiple passes"
+  default_prompt: "Verify these JASON-OS claims through a convergence loop."

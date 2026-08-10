@@ -1,0 +1,94 @@
+{
+   "description" : "JASON-OS Codex runtime guards and recovery hooks. Review and trust these hooks with /hooks before they run.",
+   "hooks" : {
+      "PostToolUse" : [
+         {
+            "hooks" : [
+               {
+                  "command" : "node $(git rev-parse --show-toplevel)/.codex/hooks/track-commit.cjs",
+                  "timeout" : 3,
+                  "type" : "command"
+               }
+            ],
+            "matcher" : "^Bash$"
+         },
+         {
+            "hooks" : [
+               {
+                  "command" : "node $(git rev-parse --show-toplevel)/.codex/hooks/label-post-tool-use.cjs",
+                  "statusMessage" : "Updating label catalog",
+                  "timeout" : 5,
+                  "type" : "command"
+               }
+            ],
+            "matcher" : "^apply_patch$"
+         }
+      ],
+      "PreCompact" : [
+         {
+            "hooks" : [
+               {
+                  "command" : "node $(git rev-parse --show-toplevel)/.codex/hooks/save-compaction-snapshot.cjs",
+                  "timeout" : 3,
+                  "type" : "command"
+               }
+            ]
+         }
+      ],
+      "PreToolUse" : [
+         {
+            "hooks" : [
+               {
+                  "command" : "node $(git rev-parse --show-toplevel)/.codex/hooks/block-push-to-protected-branch.cjs",
+                  "statusMessage" : "Checking push target",
+                  "timeout" : 3,
+                  "type" : "command"
+               }
+            ],
+            "matcher" : "^Bash$"
+         },
+         {
+            "hooks" : [
+               {
+                  "command" : "node $(git rev-parse --show-toplevel)/.codex/hooks/settings-guardian.cjs",
+                  "statusMessage" : "Checking protected Codex settings",
+                  "timeout" : 3,
+                  "type" : "command"
+               }
+            ],
+            "matcher" : "^apply_patch$"
+         }
+      ],
+      "SessionStart" : [
+         {
+            "hooks" : [
+               {
+                  "additionalContextLimit" : 500,
+                  "command" : "node $(git rev-parse --show-toplevel)/.codex/hooks/restore-compaction-snapshot.cjs",
+                  "timeout" : 3,
+                  "type" : "command"
+               }
+            ],
+            "matcher" : "^compact$"
+         }
+      ],
+      "UserPromptSubmit" : [
+         {
+            "hooks" : [
+               {
+                  "additionalContextLimit" : 500,
+                  "command" : "node $(git rev-parse --show-toplevel)/.codex/hooks/plain-language-reminder.cjs",
+                  "timeout" : 3,
+                  "type" : "command"
+               },
+               {
+                  "additionalContextLimit" : 1000,
+                  "command" : "node $(git rev-parse --show-toplevel)/.codex/hooks/label-user-prompt-submit.cjs",
+                  "timeout" : 3,
+                  "type" : "command"
+               }
+            ]
+         }
+      ]
+   }
+}

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Create Deep Plan"
+  short_description: "Create an evidence-backed implementation plan"
+  default_prompt: "Create a discovery-first implementation plan for this JASON-OS task."

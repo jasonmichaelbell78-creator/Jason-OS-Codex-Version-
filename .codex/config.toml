@@ -1,0 +1,6 @@
+# JASON-OS project defaults. Credentials and authentication state stay outside the repository.
+approval_policy = "on-request"
+sandbox_mode = "workspace-write"
+
+[features]
+hooks = true

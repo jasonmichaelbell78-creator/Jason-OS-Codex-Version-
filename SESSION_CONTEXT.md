@@ -1,61 +1,44 @@
 # Session Context — JASON-OS
 
 ## Current Session Counter
-23
+24
 
 ## Uncommitted Work
-No
+No — committed and pushed as 5852c63 (superseded by this amended checkpoint commit)
 
 ## Last Updated
-2026-04-27
+2026-08-10
 
 ---
 
 ## Quick Recovery
 
-**Last Checkpoint**: 2026-04-27 (Session 23 closure — Steps 1-3 of Session 23 plan complete; smoke-test of `/repo-analysis` against `jdpolasky/ai-chief-of-staff` surfaced a Coverage Audit relevance-skip behavioral gap that was hardened in SKILL.md v1.1; CONVENTIONS.md drift audit landed as v1.2; durable feedback memory captures the read-by-default discipline)
-**Branch**: `fixes-42226` (pushed to origin via session-end)
-**Working On**: Steps 4-8 of the Session 22 plan are next — re-emerge main-plan Batch 4 as the smaller transformer-over-repo-analysis batch, then walk Batches 5-8, then Phase 2/3/3.5/4 of `/deep-plan cross-repo-movement-reframe`, then plan closeout.
-**Home pickup**: `.research/analysis/ai-chief-of-staff/` is the Session 23 analysis artifact set (creator-view + value-map + 4 port-now knowledge candidates). `.claude/skills/repo-analysis/SKILL.md` is now v1.1 (Coverage Audit hard-gated). `.claude/skills/shared/CONVENTIONS.md` is v1.2 (DEFERRED markers + accurate routing-option count). New auto-memory entry: `feedback_repo_analysis_read_by_default.md`.
+**Last Checkpoint**: 2026-08-10 (Session 24 — Codex Phase 1 portability layer implemented and validated)
+**Branch**: `agent/codex-port-phase-1`
+**Working On**: Codex migration Phase 1 is ready to publish.
+**Home pickup**: Local-memory migration remains explicitly deferred until the operator supplies source files from the home computer; do not infer or recreate them.
 
-### Home resume contract (Session 23 → 24 fresh pickup)
+### Session 24 checkpoint
 
-Session 23 was a 3-step session that closed cleanly:
+Completed:
 
-**Step 1 — `/session-begin`** bumped counter 22 → 23. Branch fast-forwarded 13 commits from origin/fixes-42226. No prior state, no anomalies.
+- Ported 15 project workflows to `.agents/skills/`, the repository location Codex discovers.
+- Added Codex agents, project config, documented setup, compatibility contract, and migration inventory.
+- Added and activated trusted Codex hooks for protected pushes/settings, compaction recovery, commit tracking, plain-language guidance, and label automation.
+- Adapted the shared label engine so Codex state remains under ignored `.codex/state/` and follow-up derivation uses isolated read-only `codex exec`.
+- Recorded intentional exceptions: MCP health checks, desktop label notifications, and the statusline have no portable Codex/Codespaces equivalent. The large-file gate needs a named filesystem MCP contract because built-in Codex reads have no portable matcher.
+- Moved project skills from the non-discovered `.codex/skills/` location to `.agents/skills/`; restart Codex or use `/skills` after this commit to refresh the picker.
 
-**Step 2 — Smoke-test of `/repo-analysis`.** Target was `jdpolasky/ai-chief-of-staff` (an ADHD-prosthetic personal OS on Claude Code + Obsidian, 88KB / 31 files). Standard depth, full 9-phase pipeline. Surfaced:
+Validation:
 
-- 18 candidates total (7 patterns + 13 knowledge entries, plus 5 anti-patterns folded into Creator View §6 since the JASON-OS analysisRecord schema prunes anti-pattern as a candidate type).
-- 4 candidates are port-now (E0): rubber-stamp danger warning for AI-drafted feedback memories, search-vs-read structural design tenet, tool-cost ranking + cheapest-tool-first rule, don't-batch-install operational discipline.
-- 8 candidates are port-when-needed (mostly E1): memory firings log + decay analysis with bootstrap gate, two-tier user-readable vs machinery file separation, /audit as scheduled aggregate cross-system check, format-longevity tenet, CREDITS.md as a maintained attribution protocol, ADAM coherence_monitor.py pattern (read session JSONL for compaction events), setup wizard pattern, dual-mode docs writing pattern.
-- 6 candidates are note-only / already-applied.
+- `npm run schema:validate`: 14/14 passed.
+- Focused label tests passed; hook syntax, hook JSON, and `git diff --check` passed.
+- Full native Node sweep found four unrelated preserved-Claude backfill test failures: three permission-model assumptions under this container and one stale prompt-text assertion. Do not change them as part of this port without a separate request.
 
-The smoke-test also surfaced a behavioral gap: I default-skipped 4 artifacts (Notion-vs-Obsidian editorials, obsidian-setup Layers 4-5, CREDITS.md) on relevance grounds — a heuristic the SKILL text does NOT actually endorse. User reversed every skip; the reversed reads contained the highest-value insights. Triggered SKILL.md v1.0 → v1.1 hardening (Critical Rule 10 forbidding relevance-based skips, Phase 6b Coverage Audit hard-gated, Delegation table fixed, Self-Audit check 11 scans for relevance-language, version + history bumped). Durable feedback memory `feedback_repo_analysis_read_by_default.md` captures the discipline cross-session.
+Next step:
 
-**Step 3 — CONVENTIONS.md drift audit.** Closed the follow-ups from Session 22's port walkthrough. Seven sections updated with DEFERRED markers in the JASON-OS bootstrap pattern: §11 (Extraction Context), §13.1 (extraction-journal MUST row), §13.4 (version reference v4.3 → v1.0), §14.3/14.4/14.6 (tag-vocabulary.json + cas/retag.js + dual-write to extraction-journal), §15 (8 routing options → 7 + version reference), §17 (full Synthesis Output Contract). Plus two adjacent items found mid-audit: §9 ROADMAP.md DEFERRED, intro paragraph port-status note. Header bumped 1.1 → 1.2.
-
-**Surfaced follow-ups (filed but deferred):**
-- DRIFT-1 in `.research/analysis/ai-chief-of-staff/findings.jsonl`: SKILL.md Phase 6 prose still describes 4 candidate types (pattern / knowledge / content / anti-pattern) but the JASON-OS analysisRecord schema prunes content + anti-pattern per PORT_DECISIONS.md Batch 2. Output complies with schema; SKILL text edit is a follow-up pass.
-- 4 port-now knowledge candidates from this analysis are not yet applied. Each is a small CLAUDE.md / tenet edit that could happen any time.
-- GitHub Dependabot reports 1 moderate vulnerability on `main` (unrelated to this branch's commits; visible at the security/dependabot/1 URL).
-- Two pre-existing `.claude/state/deep-plan.*.state.json` files (jason-os-mvp + piece-3-structural-fix) remain untracked from before this session. Both have non-terminal phase status; left alone per Step 8 warn-don't-delete discipline.
-
-Session 24 pickup:
-1. `/session-begin` — bump counter 23 → 24. Branch stays `fixes-42226`.
-2. **(Optional but cheap)** apply the 4 port-now knowledge candidates from the Session 23 analysis — small CLAUDE.md / tenet edits that close the gap surfaced by the smoke-test.
-3. **Re-emerge main-plan Batch 4** as the smaller transformer-over-repo-analysis + /extract batch (5-7 questions instead of 10+).
-4. **Walk main-plan Batches 5-8** of `/deep-plan cross-repo-movement-reframe`: Batch 5 `/sync-back`, Batch 6 cache + fast-path, Batch 7 decision register, Batch 8 closeout + OTB.
-5. **Phase 2 / 3 / 3.5 / 4 of main plan** — DECISIONS.md compile, PLAN.md with audit checkpoints, self-audit, user-approval gate.
-6. **Rotate `weather_api_key`** (operator task, still pending from Session 19 — edit `~/.claude/statusline/config.local.toml`).
-7. **Plan closeout** — formal deprecation of the five superseded plans, resolve T37 (core JASON-OS tenets), retire `.gitignore` bridge once `/context-sync` ships.
-
-**Decision counts:**
-- Main /deep-plan: 42 decisions LOCKED (unchanged from Session 22).
-- Port walkthrough: 61 decisions LOCKED (closed in Session 22).
-- This session: 0 plan decisions; 18 analysis candidates produced; 1 behavioral hardening (Critical Rule 10 + Self-Audit check 11) applied.
-
----
+- Trust changed project hooks through `/hooks`, restart Codex, and verify project skills through `/skills`.
+- Resume deferred local-memory work only when the source files are available.
 
 ## Quick Status
 

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Brainstorm Direction"
+  short_description: "Explore JASON-OS design directions"
+  default_prompt: "Help me explore several directions before we plan implementation."

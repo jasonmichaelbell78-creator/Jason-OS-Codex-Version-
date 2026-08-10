@@ -1,0 +1,4 @@
+interface:
+  display_name: "Manage Todos"
+  short_description: "Manage JASON-OS cross-session tasks"
+  default_prompt: "Show the current JASON-OS todos and help me manage them."
