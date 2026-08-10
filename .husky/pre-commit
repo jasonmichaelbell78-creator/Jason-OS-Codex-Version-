@@ -17,7 +17,7 @@ if is_skipped "secrets"; then
   require_skip_reason "SKIP_CHECKS=secrets"
   echo "  gitleaks skipped (SKIP_REASON: $SKIP_REASON)"
 elif command -v gitleaks >/dev/null 2>&1; then
-  if ! gitleaks protect --staged --redact --no-banner; then
+  if ! gitleaks git --staged --redact --no-banner; then
     echo "" >&2
     echo "  Commit blocked by gitleaks (secrets detected in staged changes)" >&2
     echo "  Fix: remove the secret from staging, then recommit." >&2
