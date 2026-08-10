@@ -1,0 +1,29 @@
+{
+  "name": "JASON-OS Codex",
+  "build": {
+    "dockerfile": "Dockerfile",
+    "context": "..",
+    "args": {
+        "NODE_VERSION": "22",
+        "CODEX_CLI_VERSION": "0.147.0",
+        "GITLEAKS_VERSION": "8.29.1",
+        "GITLEAKS_SHA256": "e4eb209d04e20339d77122a3bdf9cd41351255cfb27ebcb75e85325e04f88924"
+    }
+  },
+  "features": {
+    "ghcr.io/devcontainers/features/github-cli:1": {}
+  },
+  "remoteUser": "node",
+  "updateRemoteUserUID": true,
+  "postCreateCommand": "npm ci",
+  "containerEnv": {
+    "CODEX_HOME": "/home/node/.codex"
+  },
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "terminal.integrated.defaultProfile.linux": "bash"
+      }
+    }
+  }
+}
