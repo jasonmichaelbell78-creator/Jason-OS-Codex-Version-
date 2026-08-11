@@ -1,6 +1,6 @@
-# Auto-merge Dependabot PRs for minor/patch updates when CI passes
-# Major version bumps still require manual review
-name: Auto-merge Dependabot
+# Dependabot updates require manual review by default. Automatic merging can
+# be deliberately restored later by setting DEPENDABOT_AUTOMERGE=true.
+name: Dependabot merge policy
 
 on:
   pull_request:
@@ -9,13 +9,28 @@ on:
 permissions: {}
 
 jobs:
+  manual-review:
+    name: Manual review required
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: read
+      pull-requests: read
+    if: ${{ github.actor == 'dependabot[bot]' && vars.DEPENDABOT_AUTOMERGE != 'true' }}
+    steps:
+      - name: Record manual-review policy
+        run: |
+          echo "## Dependabot update requires manual review" >> "$GITHUB_STEP_SUMMARY"
+          echo "Automatic merging is disabled for this repository." >> "$GITHUB_STEP_SUMMARY"
+
   auto-merge:
+    name: Auto-merge enabled Dependabot update
     runs-on: ubuntu-latest
     timeout-minutes: 10
     permissions:
       contents: write
       pull-requests: write
-    if: ${{ github.actor == 'dependabot[bot]' }}
+    if: ${{ github.actor == 'dependabot[bot]' && vars.DEPENDABOT_AUTOMERGE == 'true' }}
     steps:
       - name: Fetch Dependabot metadata
         id: metadata
