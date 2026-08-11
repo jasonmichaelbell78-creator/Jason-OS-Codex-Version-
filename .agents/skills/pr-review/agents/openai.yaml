@@ -1,4 +1,4 @@
 interface:
-  display_name: "Process PR Feedback"
+  display_name: "pr-review"
   short_description: "Turn external review feedback into dispositions"
   default_prompt: "Process this pull-request review feedback into fixes, deferrals, and learnings."

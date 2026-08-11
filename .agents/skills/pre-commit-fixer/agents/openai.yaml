@@ -1,4 +1,4 @@
 interface:
-  display_name: "Fix Pre-commit Failure"
+  display_name: "pre-commit-fixer"
   short_description: "Diagnose a JASON-OS pre-commit failure"
   default_prompt: "Diagnose the pre-commit failure and propose the smallest safe fix."

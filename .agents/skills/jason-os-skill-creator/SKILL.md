@@ -1,5 +1,5 @@
 ---
-name: jason-skill-authoring
+name: jason-os-skill-creator
 description: Create or revise project-local JASON-OS Codex skills using evidence, a focused workflow, packaging checks, and safe validation. Use in addition to Codex’s built-in skill-creator when the work must follow this repository’s migration and governance rules.
 ---
 

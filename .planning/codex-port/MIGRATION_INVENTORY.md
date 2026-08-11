@@ -44,7 +44,7 @@ blind copy.
 | `session-begin` | `.agents/skills/session-begin/` | `adapt` — initial port | Establish Codex session start and recovery contract. | Validate clean/dirty checkout branches. |
 | `session-end` | `.agents/skills/session-end/` | `adapt` — initial port | Retain lightweight closure only; do not restore absent SoNash metrics. | Verify summary and optional commit boundary in a fixture. |
 | `skill-audit` | `.agents/skills/skill-audit/` | `adapt` — initial port | Teach Codex skill conventions and discovery. | Audit a fixture skill. |
-| `skill-creator` | Codex built-in `skill-creator` + `.agents/skills/jason-skill-authoring/` | `adapt` — initial overlay | Retain Codex-native packaging guidance; put JASON-OS migration and governance workflow in a non-conflicting project overlay. | Scaffold and validate a disposable skill. |
+| `skill-creator` | Codex built-in `skill-creator` + `.agents/skills/jason-os-skill-creator/` | `adapt` — initial overlay | Retain Codex-native packaging guidance; put JASON-OS migration and governance workflow in a non-conflicting project overlay. | Scaffold and validate a disposable skill. |
 | `todo` | `.agents/skills/todo/` | `direct-port` — initial port | Retain JSONL/CLI contract; replace invocation language. | Run existing todo tests and fixture mutation. |
 
 ## Agents and team orchestration

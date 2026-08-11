@@ -1,4 +1,4 @@
 interface:
-  display_name: "Checkpoint Session"
+  display_name: "checkpoint"
   short_description: "Save a recoverable JASON-OS handoff"
   default_prompt: "Create a JASON-OS checkpoint for the current work."

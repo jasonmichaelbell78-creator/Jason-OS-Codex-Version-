@@ -1,4 +1,4 @@
 interface:
-  display_name: "Audit Skills"
+  display_name: "skill-audit"
   short_description: "Audit Codex skill quality and completeness"
   default_prompt: "Audit the selected project skills and report actionable findings."

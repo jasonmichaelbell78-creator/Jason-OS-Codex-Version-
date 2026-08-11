@@ -1,4 +1,4 @@
 interface:
-  display_name: "Start Session"
+  display_name: "session-begin"
   short_description: "Orient a JASON-OS work session"
   default_prompt: "Start a JASON-OS session and present the pre-flight summary."

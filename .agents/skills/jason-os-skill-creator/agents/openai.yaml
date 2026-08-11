@@ -1,4 +1,4 @@
 interface:
-  display_name: "Author JASON-OS Skills"
+  display_name: "jason-os-skill-creator"
   short_description: "Create and audit JASON-OS Codex skills"
   default_prompt: "Create or revise a project-local Codex skill using the JASON-OS authoring workflow."

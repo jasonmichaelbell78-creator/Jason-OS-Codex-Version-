@@ -1,4 +1,4 @@
 interface:
-  display_name: "End Session"
+  display_name: "session-end"
   short_description: "Prepare a JASON-OS session handoff"
   default_prompt: "Prepare the current JASON-OS session for handoff without pushing."

@@ -1,4 +1,4 @@
 interface:
-  display_name: "Deep Research"
+  display_name: "deep-research"
   short_description: "Run structured, verified research"
   default_prompt: "Research this topic with a plan, citations, challenge pass, and durable findings."
