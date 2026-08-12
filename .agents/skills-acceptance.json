@@ -1,0 +1,6 @@
+{
+  "version": 1,
+  "active_directory": ".agents/skills",
+  "candidate_directory": ".planning/codex-skill-candidates",
+  "accepted_skills": []
+}

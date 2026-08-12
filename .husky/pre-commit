@@ -12,6 +12,19 @@
 
 echo "Running pre-commit checks..."
 
+# --- Check 0: Codex skill acceptance boundary ---
+# Every discoverable project skill must have explicit operator acceptance and
+# an unchanged tree hash. This check is unconditional and cannot be skipped.
+if ! command -v node >/dev/null 2>&1; then
+  echo "  Commit blocked: node is required for Codex skill acceptance validation" >&2
+  exit 1
+elif ! node scripts/validate-codex-skills.cjs; then
+  echo "" >&2
+  echo "  Commit blocked: an active Codex skill is unaccepted or changed after acceptance" >&2
+  echo "  Keep candidates in .planning/codex-skill-candidates/ until operator acceptance." >&2
+  exit 1
+fi
+
 # --- Check 1: gitleaks (secrets detection) ---
 if is_skipped "secrets"; then
   require_skip_reason "SKIP_CHECKS=secrets"

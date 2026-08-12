@@ -42,6 +42,10 @@ tools/statusline/config.local.toml
 # logs
 *.log
 
+# operator-supplied memory archives — local reconciliation input only
+/memory.zip
+/canonical memory.zip
+
 # claude code — local state (committed: skills/agents/hooks/commands)
 # State directory contents are machine-local EXCEPT for long-lived
 # deep-plan state files, which travel cross-locale via git as a bridge

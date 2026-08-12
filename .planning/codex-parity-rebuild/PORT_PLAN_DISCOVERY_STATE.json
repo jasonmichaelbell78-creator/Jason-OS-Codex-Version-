@@ -1,0 +1,329 @@
+{
+  "version": 1,
+  "topic": "Codex parity rebuild plan reset",
+  "status": "discovery",
+  "current_batch": 11,
+  "decisions": [
+    {
+      "id": 1,
+      "decision": "Quarantine scope",
+      "choice": "Quarantine every unaccepted Codex component, including hooks and agents",
+      "rationale": "One trust rule must apply to every active runtime surface."
+    },
+    {
+      "id": 2,
+      "decision": "Discovery and execution model",
+      "choice": "Complete a global dependency census, then use complete vertical acceptance cycles",
+      "rationale": "Expose hidden dependencies before each started component is carried through acceptance."
+    },
+    {
+      "id": 3,
+      "decision": "Acceptance registry scope",
+      "choice": "Use one universal acceptance registry for all Codex component types",
+      "rationale": "Skills, hooks, agents, settings, memory runtime, and orchestration need the same enforceable active-versus-accepted boundary."
+    },
+    {
+      "id": 4,
+      "decision": "Dependency policy",
+      "choice": "Hard-gate required dependencies before component acceptance",
+      "rationale": "Prevent hidden degraded modes and plan port timing carefully to avoid current-use and dependency failures."
+    },
+    {
+      "id": 5,
+      "decision": "Prior evidence",
+      "choice": "Preserve prior partial-port work as untrusted historical evidence and independently reverify each claim before reuse",
+      "rationale": "Keep potentially useful evidence without inheriting unreliable completion claims."
+    },
+    {
+      "id": 6,
+      "decision": "Initial functional priority",
+      "choice": "Make deep-plan first and deep-research second after each one's required dependencies are accepted",
+      "rationale": "Restore interactive decision planning first, then research, without bypassing their dependency chains."
+    },
+    {
+      "id": 7,
+      "decision": "Publication cadence",
+      "choice": "Commit and push after each accepted component; open one PR only after the complete port is accepted",
+      "rationale": "Preserve recoverable progress without using a PR to signal incomplete work."
+    },
+    {
+      "id": 8,
+      "decision": "Quarantine transition",
+      "choice": "Use one atomic transition after the universal gate and continuity map are ready",
+      "rationale": "Avoid mismatches between active registrations and quarantined files."
+    },
+    {
+      "id": 9,
+      "decision": "Temporary runtime continuity",
+      "choice": "Use GitHub, Husky, AGENTS.md, Git status, and manual handoffs while nonessential Codex automation is paused",
+      "rationale": "Avoid creating temporary unaccepted hooks."
+    },
+    {
+      "id": 10,
+      "decision": "Universal registry coverage",
+      "choice": "Govern every load-bearing Codex-port component, excluding ordinary planning records",
+      "rationale": "Apply one enforceable acceptance meaning to all runtime and governance components."
+    },
+    {
+      "id": 11,
+      "decision": "Dependency taxonomy",
+      "choice": "Classify dependencies as required, optional route, or evidence-only",
+      "rationale": "Hard-gate true requirements while handling cyclic optional routes safely and explicitly."
+    },
+    {
+      "id": 12,
+      "decision": "First deep-plan chain",
+      "choice": "Universal gate, convergence-loop, then deep-plan",
+      "rationale": "Restore deep-plan after its required verification dependency without waiting on optional routes."
+    },
+    {
+      "id": 13,
+      "decision": "Deep-research dependency acceptance",
+      "choice": "Accept all eight roles independently, then orchestration, then deep-research",
+      "rationale": "Give every research dependency its own evidence, failure tests, approval, commit, and push."
+    },
+    {
+      "id": 14,
+      "decision": "Memory resumption",
+      "choice": "Superseded by decision 16",
+      "rationale": "The earlier placement treated behavioral memory and dependency-bound memory machinery as one component; decision 16 corrects that model."
+    },
+    {
+      "id": 15,
+      "decision": "Brainstorm priority",
+      "choice": "Include brainstorm early in the accepted dependency sequence",
+      "rationale": "Restore the operator's preferred ideation-to-research-to-planning workflow near the beginning of the rebuild."
+    },
+    {
+      "id": 16,
+      "decision": "Memory placement",
+      "choice": "Complete and accept behavioral-memory reconciliation before the major workflow ports, then implement dependency-bound memory machinery at each earliest valid dependency point",
+      "rationale": "Global operator rules and quality standards must govern the remaining port work from the start, while the memory section must remain incomplete until every required runtime mechanism is accepted and working."
+    },
+    {
+      "id": 17,
+      "decision": "Port success standard",
+      "choice": "Require verified behavioral parity with an explicit source-to-target mapping",
+      "rationale": "Preserve every source requirement and outcome while making Codex-native adaptations explicit, testable, and subject to operator approval."
+    },
+    {
+      "id": 18,
+      "decision": "Previous port conclusions",
+      "choice": "Reset every previous completion, active, deferred, and no-port conclusion to unverified historical evidence",
+      "rationale": "Retain potentially useful prior work without allowing unreliable conclusions to define the new baseline."
+    },
+    {
+      "id": 19,
+      "decision": "Machine-level feature acceptance",
+      "choice": "Use two-part acceptance and require both repository acceptance and operator installation verification for overall completion",
+      "rationale": "Prevent repository-ready but uninstalled or untested machine behavior from being called complete."
+    },
+    {
+      "id": 20,
+      "decision": "Runtime and workflow state",
+      "choice": "Track durable portable state and keep volatile, sensitive, cached, authentication, and machine-local state untracked",
+      "rationale": "Preserve cross-machine decisions and recovery while avoiding sensitive data, repository noise, and machine-specific conflicts."
+    },
+    {
+      "id": 21,
+      "decision": "Dependency-census detail",
+      "choice": "Use an asset-and-behavior inventory nested under components",
+      "rationale": "Account for every source file, behavior, destination, dependency, registration, state use, security boundary, test, and disposition instead of hiding omissions inside broad component buckets."
+    },
+    {
+      "id": 22,
+      "decision": "Early acceptance order",
+      "choice": "Universal gate; atomic quarantine and restart verification; global census; behavioral memory; convergence-loop; deep-plan; contrarian-challenger; brainstorm; remaining research roles; research orchestration; deep-research, with dependency-bound memory machinery inserted at each earliest valid point",
+      "rationale": "Establish trusted governance and global behavior first, preserve deep-plan priority, place brainstorm early, and satisfy every required dependency before activation."
+    },
+    {
+      "id": 23,
+      "decision": "Acceptance authority",
+      "choice": "Only the operator's explicit approval may activate a component in the universal registry",
+      "rationale": "Evidence establishes readiness but cannot authorize its own acceptance; the operator remains the sole reviewer and decision-maker."
+    },
+    {
+      "id": 24,
+      "decision": "Required testing depth",
+      "choice": "Require layered verification covering source mapping, static validation, positive fixtures, negative and failure paths, dependencies and registrations, real Codex runtime behavior, and operator approval",
+      "rationale": "Prevent fixture-only or prose-only evidence from being mistaken for working runtime parity; any inapplicable category requires an operator-approved written reason."
+    },
+    {
+      "id": 25,
+      "decision": "Quarantine restart boundary",
+      "choice": "After the quarantine commit and push, restart Codex and verify a clean runtime before beginning any component port",
+      "rationale": "Ensure definitions loaded before quarantine cannot contaminate discovery, testing, or acceptance of subsequent components."
+    },
+    {
+      "id": 26,
+      "decision": "Exceptions and exclusions",
+      "choice": "Require the operator's explicit approval for every exclusion, replacement, reduced scope, or deferral",
+      "rationale": "Prevent implementation judgment from silently removing source requirements; each proposal must identify its evidence, consequences, alternatives, and recommendation."
+    },
+    {
+      "id": 27,
+      "decision": "Newly discovered dependencies",
+      "choice": "Stop the affected component, update the dependency graph, and obtain operator approval before resuming it",
+      "rationale": "Keep scope and order changes visible while allowing only genuinely unaffected work to continue."
+    },
+    {
+      "id": 28,
+      "decision": "Claude source drift",
+      "choice": "Record source hashes, detect changes automatically, and invalidate affected mapping evidence until targeted re-review",
+      "rationale": "Prevent accepted evidence from silently becoming stale when the preserved source implementation changes."
+    },
+    {
+      "id": 29,
+      "decision": "Acceptance unit size",
+      "choice": "Accept the smallest independently load-bearing component, grouping files only when separation would create a nonworking unit",
+      "rationale": "Provide precise review and failure isolation for skills, agents, hooks, shared engines, registrations, memory layers, and runtime configuration."
+    },
+    {
+      "id": 30,
+      "decision": "Planning-discovery completion",
+      "choice": "Discovery completes only when the entire port is mapped, every currently answerable gate is resolved, and the operator approves the complete plan inline",
+      "rationale": "Prevent high-level ordering from being mistaken for a complete executable plan and prohibit unresolved scope from leaking into implementation."
+    },
+    {
+      "id": 31,
+      "decision": "Claude unfinished-design boundary",
+      "choice": "Complete every internal stub, dormant path, and deferred section of each included workflow, without automatically absorbing genuinely separate future products",
+      "rationale": "Deliver complete included workflows while preventing references to unbuilt external systems from silently expanding the port into unrelated product development."
+    },
+    {
+      "id": 32,
+      "decision": "Post-port research and roadmap continuation",
+      "choice": "Continue the repository's broader existing research and planning in a separate project after the Codex port is complete",
+      "rationale": "Keep port completion bounded and verifiable while preserving a complete inventory and handoff of future-product research, plans, and unresolved roadmap work."
+    },
+    {
+      "id": 33,
+      "decision": "Shared synchronization-system location",
+      "choice": "Place the runtime-neutral schema and labeling subsystem under root-level sync/",
+      "rationale": "Keep shared code, tests, schemas, and documentation together without misclassifying them as Claude- or Codex-specific runtime configuration."
+    },
+    {
+      "id": 34,
+      "decision": "Labeling-system port scope",
+      "choice": "Include and complete the current labeling system in this port",
+      "rationale": "The existing substantial Claude subsystem, label-audit workflow, and hook behavior are part of current parity even though broader cross-repository synchronization extensions belong to the later project."
+    },
+    {
+      "id": 35,
+      "decision": "Complete label activation",
+      "choice": "Require a real repository backfill, operator arbitration, catalog promotion, atomic hook activation, and live runtime verification",
+      "rationale": "Prevent a tested library or dormant hook scaffold from being called a working labeling system and keep ambiguous labels under operator authority."
+    },
+    {
+      "id": 36,
+      "decision": "Claude-source preservation during shared-target creation",
+      "choice": "Preserve .claude/ as the comparison source and create independently accepted shared and Codex targets with recorded source hashes",
+      "rationale": "Maintain trustworthy source evidence and isolate Codex changes without coupling this port to a simultaneous Claude refactor."
+    },
+    {
+      "id": 37,
+      "decision": "Tracked historical Claude state",
+      "choice": "Preserve it as historical evidence, verify durable decisions are represented elsewhere, and do not activate it as Codex runtime state",
+      "rationale": "Retain provenance without pretending stale Claude-specific execution state can safely resume in a different runtime."
+    },
+    {
+      "id": 38,
+      "decision": "Critical-protection enforcement",
+      "choice": "Use layered enforcement across Codex hooks, shared deterministic checks, Husky, GitHub protections, and universal acceptance-registry validation",
+      "rationale": "Codex hooks provide immediate feedback but are not a complete enforcement boundary; shared logic and independent repository controls prevent one disabled or bypassed surface from removing protection."
+    },
+    {
+      "id": 39,
+      "decision": "Large-file read-gate adaptation",
+      "choice": "Use a layered context-safety replacement and explicitly accept the documented Codex specialized-tool interception boundary",
+      "rationale": "Preserve size-first and bounded-reading behavior across observable shell, MCP, and local tool paths without falsely claiming universal interception that Codex does not expose."
+    },
+    {
+      "id": 40,
+      "decision": "Label-failure notification",
+      "choice": "Notify directly from the producing failure path using durable pending state, immediate system context, repeated acknowledgment warnings, best-available terminal notification, and operator-verified user-level delivery where applicable",
+      "rationale": "Replace the unavailable Claude Notification hook event with redundant delivery tied directly to the failure, while respecting project-versus-user configuration boundaries."
+    },
+    {
+      "id": 41,
+      "decision": "Session closure",
+      "choice": "Use an explicit complete session-end skill as the primary interactive workflow and a bounded SessionEnd hook only for emergency preservation",
+      "rationale": "Codex SessionEnd timing and its three-second limit cannot perform the source workflow's interactive review, decisions, commit, and push sequence."
+    },
+    {
+      "id": 42,
+      "decision": "Claude status-line port",
+      "choice": "Do not port the Claude status-line capability or build a Codex replacement",
+      "rationale": "The operator explicitly approved statusline as a final port exclusion; preserve the Claude source as historical evidence without assigning replacement work to this or the later continuation project."
+    },
+    {
+      "id": 43,
+      "decision": "MCP-dependent routes",
+      "choice": "Complete and verify the real route-specific Context7, Memory MCP, and SonarCloud integrations; treat unused permission-only MCP entries as evidence-only",
+      "rationale": "Preserve actual workflow capabilities without turning unrelated MCP services into global dependencies or allowing unavailable optional routes to degrade silently."
+    },
+    {
+      "id": 44,
+      "decision": "Missing GSD routes",
+      "choice": "Expand the Codex deep-plan workflow to support multi-phase projects, milestones, phase decomposition, dependency ordering, durable project state, and execution handoff",
+      "rationale": "Replace unavailable external GSD commands with a complete self-contained Codex planning outcome instead of retaining broken routes."
+    },
+    {
+      "id": 45,
+      "decision": "Add-debt completion",
+      "choice": "Build a complete bounded structured debt-intake system with guarded mutations, generated review output, lifecycle operations, cross-links, and layered tests",
+      "rationale": "Deep-research, PR review, and pre-commit repair require a real debt workflow rather than the current Markdown append stub; broader analytics remain subject to separate decisions."
+    },
+    {
+      "id": 46,
+      "decision": "Other missing future-workflow routes",
+      "choice": "Partially resolved: build complete create-audit, skill-ecosystem-audit, hook-ecosystem-audit, PR-retro, and systematic-debugging capabilities; implement quick-fix as a bounded explicit mode of pre-commit-fixer. Remaining named routes still require individual decisions.",
+      "rationale": "The operator approved Q46.1 through Q46.6. These are real workflow requirements, not handoff buckets: the three audits retain their distinct scopes, PR-retro closes the existing learning loop, systematic-debugging remains reusable, and quick-fix shares the pre-commit repair engine without duplicating it. No unreviewed route is implicitly deferred or included.",
+      "subdecisions": [
+        {
+          "id": "46.1",
+          "route": "create-audit",
+          "choice": "Build a complete separate create-audit workflow."
+        },
+        {
+          "id": "46.2",
+          "route": "skill-ecosystem-audit",
+          "choice": "Build a complete orchestrated skill-ecosystem audit with eight dimensions, shared rules, synthesis, review, and remediation."
+        },
+        {
+          "id": "46.3",
+          "route": "hook-ecosystem-audit",
+          "choice": "Build a complete hook-ecosystem audit workflow."
+        },
+        {
+          "id": "46.4",
+          "route": "pr-retro",
+          "choice": "Build a standalone complete PR retrospective that consumes PR learnings and proposes memory or workflow promotion through operator approval."
+        },
+        {
+          "id": "46.5",
+          "route": "systematic-debugging",
+          "choice": "Build a complete reusable systematic-debugging workflow."
+        },
+        {
+          "id": "46.6",
+          "route": "quick-fix",
+          "choice": "Implement quick-fix as a bounded explicit mode of pre-commit-fixer rather than as a separate skill."
+        }
+      ]
+    },
+    {
+      "id": 47,
+      "decision": "MCP health semantics",
+      "choice": "Separate configuration and authentication health from live tool-capability preflight",
+      "rationale": "Do not report configured server names as availability; workflows must verify a real tool route before relying on it without exposing secrets."
+    },
+    {
+      "id": 48,
+      "decision": "End-to-end gap inventory and reconciliation",
+      "choice": "Require a complete gap-inventory analysis comparison before plan approval and repeat it before final port completion",
+      "rationale": "Prove that every source asset, behavior, dependency, route, state contract, registration, test, prior conclusion, approved exclusion, platform replacement, and separate-project boundary is accounted for in the plan and then in accepted working implementation."
+    }
+  ],
+  "updated": "2026-08-12"
+}

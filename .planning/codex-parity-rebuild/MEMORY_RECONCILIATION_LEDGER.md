@@ -66,7 +66,7 @@
 | `feedback_testing_with_writes.md` | local-only | pending operator review |
 | `feedback_todo_graduation.md` | local-only | pending operator review |
 | `feedback_user_action_steps.md` | local-only | pending operator review |
-| `feedback_verify_not_grep.md` | supplied-tracked-conflict | pending operator review |
+| `feedback_verify_not_grep.md` | supplied-and-tracked-identical; absent from local archive | no tracked change needed; pending operator confirmation of retention |
 | `feedback_workflow_chain.md` | local-only | pending operator review |
 | `feedback_worktree_guidance.md` | local-only | pending operator review |
 | `feedback_write_rejection_hard_stop.md` | local-only | pending operator review |

@@ -38,6 +38,13 @@ do not put credentials in the repository.
 - Until a workflow appears under `.agents/skills/` and passes its smoke test,
   a same-named `.claude/skills/` workflow is Claude-only; do not claim that it
   is already available as a Codex skill.
+- Treat every project-local skill outside `.agents/skills/` as unavailable.
+  Unverified ports live in `.planning/codex-skill-candidates/`; do not invoke
+  them as workflows or use them to validate other candidates.
+- A project-local skill may enter `.agents/skills/` only after its complete
+  acceptance packet is reviewed, the operator explicitly approves it, and its
+  tree hash is recorded in `.agents/skills-acceptance.json`. Any later file
+  change invalidates that acceptance until the skill is reviewed again.
 - Prefer the narrowest approval, sandbox, filesystem, and network access that
   completes the task. Treat escalation prompts as an operator decision.
 - Use `git status` before and after changes. Run `npm run schema:validate`
