@@ -26,7 +26,7 @@
 | checkpoint | checkpoint | in-analysis | source sections: use and exclusion rules; reality inspection; shared handoff; task-state schema; safe commit consideration; MCP persistence; recovery; report | Codex state ownership and reviewed memory path pending |
 | session-begin | session-begin | accepted | source sections: scope; duplicate rules; warm-up; handoff; branch and staleness checks; deferred infrastructure; hook warning gate; complete summary and goal selection; triage; compaction recovery; integration | Session 26 executed the full supported pre-flight; counter, handoff, branch/log comparison, warning gate, and summary were observed |
 | session-end | session-end | in-verification | source sections: scope and anti-patterns; duplicate and compaction recovery; five-field handoff; plan check; best-effort compliance; deferred metrics; cleanup; pre-commit review; closure script and fallback; learning boundary; integrations | source-to-target coverage complete; real closure-script exercise deferred until the user ends this session |
-| brainstorm | brainstorm | in-analysis | pending | pending |
+| brainstorm | brainstorm | in-verification | source sections: use/routing; warm-up; landscape and duplicate check; diverge, anti-goals, and three-direction gate; evaluate; contrarian and grounding checks; user convergence; artifact, convergence check, routing; guardrails; state/recovery; integration | source coverage rebuilt; durable task-state and registered challenger-role integration await their component contracts |
 | convergence-loop | convergence-loop | in-analysis | pending | pending |
 | deep-plan | deep-plan | in-analysis | pending | pending |
 | skill-audit | skill-audit | in-analysis | pending | pending |

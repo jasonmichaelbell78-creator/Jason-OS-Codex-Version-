@@ -13,6 +13,7 @@ This record contains only checks actually run. Aggregate success never replaces 
 - `checkpoint`: recovery and state contract mapped; generated Codex state ownership and external-memory persistence remain pending the dedicated state and memory phases.
 - `session-begin`: Session 26 exercised duplicate detection, handoff read, branch/status/log comparison, hook-warning threshold check, one counter increment, and goal summary; deferred checks were stated as deferred.
 - `session-end`: source coverage rebuilt; verification is intentionally deferred because a real run closes the currently active session and exercises commit/push gates.
+- `brainstorm`: phased source workflow rebuilt; verification awaits durable state ownership, specialist-role contracts, and an end-to-end fixture.
 
 
 - `add-debt`: disposable fixture passed; preserved rows, next ID, single append, and pipe escaping verified.
