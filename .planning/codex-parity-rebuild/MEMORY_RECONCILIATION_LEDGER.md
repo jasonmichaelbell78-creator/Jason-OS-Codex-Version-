@@ -79,7 +79,7 @@
 | `user_communication_preferences.md` | local-and-tracked-identical | pending operator review |
 | `user_creation_mindset.md` | local-only | pending operator review |
 | `user_decision_authority.md` | local-and-tracked-identical | pending operator review |
-| `user_expertise_profile.md` | three-way-conflict | pending operator review |
+| `user_expertise_profile.md` | three-way-conflict | approved: local-memory version is authoritative; tracked profile and index updated |
 
 ## Required next review
 

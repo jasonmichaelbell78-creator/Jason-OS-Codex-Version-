@@ -5,8 +5,8 @@
 - [Communication preferences](user_communication_preferences.md) — Concise
   responses, batch questions 5-8, delegation pattern, push protocol, two-locale
   awareness
-- [Expertise profile](user_expertise_profile.md) — Node.js/scripting/tooling
-  expert, frontend needs guidance, solo developer
+- [Expertise profile](user_expertise_profile.md) — No-code AI orchestrator;
+  assess tools by ease, thoroughness, and quality rather than language stack
 - [Decision authority](user_decision_authority.md) — What Claude decides
   (naming, implementation) vs what user retains (architecture, security, scope)
 

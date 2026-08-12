@@ -1,15 +1,15 @@
 ---
 name: user_expertise_profile
-description:
-  Developer skill profile — Node.js/scripting/tooling expert, frontend needs
-  guidance
+description: No-code AI orchestrator who builds through AI, not direct coding.
 type: user
-status: active
 ---
 
-- Deep Node.js / scripting / infrastructure expertise
-- Strong on tooling, automation, CI/CD, hooks, audit systems
-- Frontend: less familiar, leans on guidance when working in UI code
-- Solo developer — single contributor
-- Stack for this project (JASON-OS) is intentionally TBD; profile will sharpen
-  as the stack is chosen
+- No-code AI orchestrator: builds through AI orchestration rather than direct
+  coding. Tool or language familiarity must not drive technology decisions.
+- Evaluate tools by ease of use, thoroughness, and quality.
+- Solo orchestrator with strong interest in tooling design, automation
+  architecture, CI/CD, hooks, and audit systems.
+- Primary focus is meta-tooling—skills, agents, and hooks—rather than app
+  features.
+- Complexity can outrun understanding. Explain technical work in plain language
+  and check comprehension at meaningful scope boundaries.
