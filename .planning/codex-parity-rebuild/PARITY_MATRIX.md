@@ -24,7 +24,7 @@
 | add-debt | add-debt | accepted | source sections: purpose; use and exclusion boundaries; fields; header; ID, escaping, date; append-only and secret guards; upgrade triggers; confirmation | disposable log fixture passed |
 | todo | todo | accepted | source sections: critical rules; boundaries; ledger and generated view; schema; menu; all eight operations; CLI mutation, integrity, and exit contracts; context; compaction; session integration boundary | pure mutation fixture and live-ledger validation passed |
 | checkpoint | checkpoint | in-analysis | source sections: use and exclusion rules; reality inspection; shared handoff; task-state schema; safe commit consideration; MCP persistence; recovery; report | Codex state ownership and reviewed memory path pending |
-| session-begin | session-begin | in-analysis | pending | pending |
+| session-begin | session-begin | accepted | source sections: scope; duplicate rules; warm-up; handoff; branch and staleness checks; deferred infrastructure; hook warning gate; complete summary and goal selection; triage; compaction recovery; integration | Session 26 executed the full supported pre-flight; counter, handoff, branch/log comparison, warning gate, and summary were observed |
 | session-end | session-end | in-analysis | pending | pending |
 | brainstorm | brainstorm | in-analysis | pending | pending |
 | convergence-loop | convergence-loop | in-analysis | pending | pending |

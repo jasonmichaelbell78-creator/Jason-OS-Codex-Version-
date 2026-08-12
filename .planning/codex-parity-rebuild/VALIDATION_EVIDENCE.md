@@ -11,6 +11,7 @@ This record contains only checks actually run. Aggregate success never replaces 
 ## In-progress component evidence
 
 - `checkpoint`: recovery and state contract mapped; generated Codex state ownership and external-memory persistence remain pending the dedicated state and memory phases.
+- `session-begin`: Session 26 exercised duplicate detection, handoff read, branch/status/log comparison, hook-warning threshold check, one counter increment, and goal summary; deferred checks were stated as deferred.
 
 
 - `add-debt`: disposable fixture passed; preserved rows, next ID, single append, and pipe escaping verified.
