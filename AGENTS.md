@@ -42,6 +42,11 @@ do not put credentials in the repository.
   completes the task. Treat escalation prompts as an operator decision.
 - Use `git status` before and after changes. Run `npm run schema:validate`
   after schema-related work and after each port batch.
+- Do not defer incomplete, difficult, or cross-cutting work merely to report a
+  component as done. A deferral, exception, reduced scope, or later-phase
+  dependency requires the operator's explicit approval before it is recorded
+  or relied on. Until then, keep the affected component visibly incomplete and
+  continue the required investigation or implementation.
 
 ## Repository boundaries
 
