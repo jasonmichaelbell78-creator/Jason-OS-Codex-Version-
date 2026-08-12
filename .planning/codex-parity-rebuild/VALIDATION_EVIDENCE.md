@@ -8,6 +8,11 @@ This record contains only checks actually run. Aggregate success never replaces 
 | 2026-08-12 | GitHub governance | GitHub UI confirmation by operator | confirmed | Actions default permissions and manual Dependabot policy confirmed; API token has insufficient permission to read those settings. |
 | 2026-08-12 | Governance baseline | `git diff --check`, Gitleaks, label-catalog commit checks | pass | Commit `62f4da0`. |
 
+## In-progress component evidence
+
+- `add-debt`: source-to-target coverage recorded; rebuilt target awaits a disposable-log write fixture.
+- `todo`: source-to-target comparison started; current target is materially compressed and remains in analysis.
+
 ## Pending validation
 
 - One fixture or read-only integration check per skill.

@@ -21,7 +21,7 @@
 
 | Source workflow | Candidate target | State | Source-section map | Component evidence |
 | --- | --- | --- | --- | --- |
-| add-debt | add-debt | in-analysis | pending | pending |
+| add-debt | add-debt | in-verification | source sections: purpose; use and exclusion boundaries; fields; header; ID, escaping, date; append-only and secret guards; upgrade triggers; confirmation | fixture pending |
 | todo | todo | in-analysis | pending | pending |
 | checkpoint | checkpoint | in-analysis | pending | pending |
 | session-begin | session-begin | in-analysis | pending | pending |
