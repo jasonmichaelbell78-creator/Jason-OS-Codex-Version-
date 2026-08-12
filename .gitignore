@@ -47,6 +47,7 @@ tools/statusline/config.local.toml
 # deep-plan state files, which travel cross-locale via git as a bridge
 # until /context-sync (cross-repo-movement-reframe plan) absorbs them.
 # Bridge retirement is a closeout-phase task in that plan.
+.codex/state/*
 .claude/state/*
 !.claude/state/deep-plan.*.state.json
 .claude/tmp/

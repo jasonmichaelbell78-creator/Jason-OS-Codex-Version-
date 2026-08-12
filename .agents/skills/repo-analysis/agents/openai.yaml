@@ -1,0 +1,4 @@
+interface:
+  display_name: "repo-analysis"
+  short_description: "Produce a complete repository analysis"
+  default_prompt: "Analyze this repository comprehensively and write the requested report."

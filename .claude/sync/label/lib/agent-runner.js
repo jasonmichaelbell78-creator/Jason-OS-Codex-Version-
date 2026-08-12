@@ -36,9 +36,10 @@ const { resolveExecutable } = require(
 const { sanitize } = require("./sanitize");
 
 const DEFAULT_TIMEOUT_MS = 120_000; // 2 min per agent (back-fill can override)
+const LABEL_RUNTIME = process.env.JASON_OS_LABEL_RUNTIME === "codex" ? "codex" : "claude";
 const DEFAULT_PENDING_QUEUE = path.join(
   REPO_ROOT_SENTINEL,
-  ".claude",
+  "." + LABEL_RUNTIME,
   "state",
   "label-pending-failures.jsonl"
 );
@@ -63,8 +64,9 @@ function newJobId() {
  * @returns {{pid: number | null, spawnedAt: number}} spawn metadata
  */
 function defaultHeadlessSpawner({ prompt, outputPath, timeoutMs, env }) {
-  const claudeBinary = resolveExecutable("claude");
-  if (!claudeBinary) {
+  const binaryName = LABEL_RUNTIME === "codex" ? "codex" : "claude";
+  const agentBinary = resolveExecutable(binaryName);
+  if (!agentBinary) {
     // No claude binary in PATH. Emit the same structured error shape as an
     // async spawn failure so the next Step-0 sweep surfaces via
     // applyAgentOutput's `output.error` path instead of hanging as
@@ -72,14 +74,17 @@ function defaultHeadlessSpawner({ prompt, outputPath, timeoutMs, env }) {
     try {
       fs.writeFileSync(
         outputPath,
-        JSON.stringify({ error: "spawn failed: claude binary not found in PATH" })
+        JSON.stringify({ error: "spawn failed: " + binaryName + " binary not found in PATH" })
       );
     } catch {
       // If marker write fails, pending-queue sweep still times out the job.
     }
     return { pid: null, spawnedAt: Date.now() };
   }
-  const child = spawn(claudeBinary, ["-p", "--output-format=json"], {
+  const args = LABEL_RUNTIME === "codex"
+    ? ["exec", "--disable", "hooks", "--sandbox", "read-only", "--ephemeral", "--output-last-message", outputPath, "-"]
+    : ["-p", "--output-format=json"];
+  const child = spawn(agentBinary, args, {
     detached: true,
     stdio: ["pipe", "ignore", "ignore"],
     env: { ...process.env, ...(env ?? {}), LABEL_AGENT_OUTPUT_PATH: outputPath },

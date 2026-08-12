@@ -62,7 +62,8 @@ const LOCAL_CATALOG = path.join(LABEL_ROOT, "local.jsonl");
 const MAJOR_EDIT_LENGTH_RATIO = 0.2;
 
 // Agent-output directory
-const AGENT_OUTPUT_DIR = path.join(REPO_ROOT, ".claude", "state", "label-agent-output");
+const LABEL_RUNTIME = process.env.JASON_OS_LABEL_RUNTIME === "codex" ? "codex" : "claude";
+const AGENT_OUTPUT_DIR = path.join(REPO_ROOT, "." + LABEL_RUNTIME, "state", "label-agent-output");
 
 /**
  * Entry point — called once stdin is fully read.
@@ -349,8 +350,12 @@ function buildAgentPrompt(relPath, classification) {
     "  notes, data_contracts, component_units, composite_id,",
     "  plus any per-type extensions the file's `type` mandates.",
     "",
-    "Write the JSON object to $LABEL_AGENT_OUTPUT_PATH (environment variable).",
-    "On any error, write {\"error\": \"<sanitized-message>\"} to that path instead of crashing silently.",
+    LABEL_RUNTIME === "codex"
+      ? "Return only the JSON object in your final response. On any error, return {\"error\": \"<sanitized-message>\"}."
+      : "Write the JSON object to $LABEL_AGENT_OUTPUT_PATH (environment variable).",
+    LABEL_RUNTIME === "codex"
+      ? ""
+      : "On any error, write {\"error\": \"<sanitized-message>\"} to that path instead of crashing silently.",
   ].join("\n");
 }
 

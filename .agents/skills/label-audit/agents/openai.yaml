@@ -1,0 +1,4 @@
+interface:
+  display_name: "label-audit"
+  short_description: "Audit label catalogs safely"
+  default_prompt: "Audit the label catalogs and present a dry-run findings report."

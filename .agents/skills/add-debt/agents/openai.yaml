@@ -1,0 +1,4 @@
+interface:
+  display_name: "add-debt"
+  short_description: "Record a JASON-OS technical-debt item"
+  default_prompt: "Capture the current technical debt as a JASON-OS debt-log entry."
