@@ -9,6 +9,21 @@ evidence-backed exception with a documented alternative. All component tests,
 integration tests, documentation checks, and release review pass. Only then is
 the replacement PR opened or made ready.
 
+## Completeness and explicit-approval gate
+
+No incomplete component may be described as complete, accepted, ported, or
+ready based on a scaffold, prose rewrite, partial fixture, or deferred
+dependency. A deferral, exception, reduced scope, or postponed dependency is
+permitted only after the operator explicitly approves the specific record in
+`EXCEPTION_REGISTER.md`; until then, the component remains visibly incomplete
+and the required investigation or implementation continues.
+
+Before further implementation or acceptance claims, complete the Phase 1
+section-level source map and dependency map for every inventoried file,
+including skill companions, hook helpers, existing Codex state, roles, team
+orchestration, memory, settings, labels, and statusline. The group sequence in
+Phase 3 controls execution order only; it does not waive this discovery gate.
+
 ## Phase 0 — Freeze the flawed baseline and establish the rebuild boundary
 
 ### Phase 0A — Establish GitHub governance before PR work
@@ -54,8 +69,10 @@ team artifact:
    fully explained candidate exception. Candidate exceptions do not become
    approved until the operator signs them off.
 
-Done when: every asset has a verified target design and no unexamined Claude
-dependency remains.
+Done when: every asset, including every companion and helper file, has a
+verified target design and no unexamined Claude dependency remains. No Phase 3
+component may become `accepted` until its dedicated self-audit and component or
+safe integration test both pass.
 
 Audit checkpoint: independently re-read the source inventory and matrix;
 every source file and behavior must have a corresponding row.
