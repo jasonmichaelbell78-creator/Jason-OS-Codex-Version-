@@ -25,7 +25,7 @@
 | todo | todo | accepted | source sections: critical rules; boundaries; ledger and generated view; schema; menu; all eight operations; CLI mutation, integrity, and exit contracts; context; compaction; session integration boundary | pure mutation fixture and live-ledger validation passed |
 | checkpoint | checkpoint | in-analysis | source sections: use and exclusion rules; reality inspection; shared handoff; task-state schema; safe commit consideration; MCP persistence; recovery; report | Codex state ownership and reviewed memory path pending |
 | session-begin | session-begin | accepted | source sections: scope; duplicate rules; warm-up; handoff; branch and staleness checks; deferred infrastructure; hook warning gate; complete summary and goal selection; triage; compaction recovery; integration | Session 26 executed the full supported pre-flight; counter, handoff, branch/log comparison, warning gate, and summary were observed |
-| session-end | session-end | in-analysis | pending | pending |
+| session-end | session-end | in-verification | source sections: scope and anti-patterns; duplicate and compaction recovery; five-field handoff; plan check; best-effort compliance; deferred metrics; cleanup; pre-commit review; closure script and fallback; learning boundary; integrations | source-to-target coverage complete; real closure-script exercise deferred until the user ends this session |
 | brainstorm | brainstorm | in-analysis | pending | pending |
 | convergence-loop | convergence-loop | in-analysis | pending | pending |
 | deep-plan | deep-plan | in-analysis | pending | pending |
