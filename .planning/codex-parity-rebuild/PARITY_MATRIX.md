@@ -21,8 +21,8 @@
 
 | Source workflow | Candidate target | State | Source-section map | Component evidence |
 | --- | --- | --- | --- | --- |
-| add-debt | add-debt | in-verification | source sections: purpose; use and exclusion boundaries; fields; header; ID, escaping, date; append-only and secret guards; upgrade triggers; confirmation | fixture pending |
-| todo | todo | in-analysis | pending | pending |
+| add-debt | add-debt | accepted | source sections: purpose; use and exclusion boundaries; fields; header; ID, escaping, date; append-only and secret guards; upgrade triggers; confirmation | disposable log fixture passed |
+| todo | todo | accepted | source sections: critical rules; boundaries; ledger and generated view; schema; menu; all eight operations; CLI mutation, integrity, and exit contracts; context; compaction; session integration boundary | pure mutation fixture and live-ledger validation passed |
 | checkpoint | checkpoint | in-analysis | pending | pending |
 | session-begin | session-begin | in-analysis | pending | pending |
 | session-end | session-end | in-analysis | pending | pending |

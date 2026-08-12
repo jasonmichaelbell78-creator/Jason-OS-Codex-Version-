@@ -10,8 +10,8 @@ This record contains only checks actually run. Aggregate success never replaces 
 
 ## In-progress component evidence
 
-- `add-debt`: source-to-target coverage recorded; rebuilt target awaits a disposable-log write fixture.
-- `todo`: source-to-target comparison started; current target is materially compressed and remains in analysis.
+- `add-debt`: disposable fixture passed; preserved rows, next ID, single append, and pipe escaping verified.
+- `todo`: pure mutation fixture passed all add, edit, progress, complete, archive, and delete operations plus ID-edit rejection and regression guards; the live ledger passed read-only integrity validation (37 records, last ID T37).
 
 ## Pending validation
 
