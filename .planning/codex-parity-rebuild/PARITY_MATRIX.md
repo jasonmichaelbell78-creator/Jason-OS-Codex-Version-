@@ -23,7 +23,7 @@
 | --- | --- | --- | --- | --- |
 | add-debt | add-debt | accepted | source sections: purpose; use and exclusion boundaries; fields; header; ID, escaping, date; append-only and secret guards; upgrade triggers; confirmation | disposable log fixture passed |
 | todo | todo | accepted | source sections: critical rules; boundaries; ledger and generated view; schema; menu; all eight operations; CLI mutation, integrity, and exit contracts; context; compaction; session integration boundary | pure mutation fixture and live-ledger validation passed |
-| checkpoint | checkpoint | in-analysis | pending | pending |
+| checkpoint | checkpoint | in-analysis | source sections: use and exclusion rules; reality inspection; shared handoff; task-state schema; safe commit consideration; MCP persistence; recovery; report | Codex state ownership and reviewed memory path pending |
 | session-begin | session-begin | in-analysis | pending | pending |
 | session-end | session-end | in-analysis | pending | pending |
 | brainstorm | brainstorm | in-analysis | pending | pending |
